@@ -20,7 +20,12 @@ function addTodo(e) {
   todoDiv.classList.add("todo");
   //Create list
   const newTodo = document.createElement("li");
-  newTodo.innerText = todoInput.value;
+
+  if (todoInput.value === "" || null) {
+    return;
+  } else {
+    newTodo.innerText = todoInput.value;
+  }
   //Save to local - do this last
   //Save to local
   saveLocalTodos(todoInput.value);
@@ -68,6 +73,7 @@ function filterTodo(e) {
     switch (e.target.value) {
       case "all":
         todo.style.display = "flex";
+
         break;
       case "completed":
         if (todo.classList.contains("completed")) {

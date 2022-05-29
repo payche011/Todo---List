@@ -71,6 +71,7 @@ form button:hover {
 
 .todo li {
   flex: 1;
+  font-size: 1rem;
 }
 
 .trash-btn,
@@ -142,6 +143,10 @@ select {
   padding: 1rem;
 
 
+}
+
+select option {
+  font-family: inherit;
 }
 
 .select:hover::after {
